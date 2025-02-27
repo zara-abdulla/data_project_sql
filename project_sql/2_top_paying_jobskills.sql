@@ -7,7 +7,7 @@ from job_postings_fact as jpf
 LEFT JOIN company_dim as cd ON
 cd.company_id=jpf.company_id
 where job_title_short LIKE '%Data Analyst%' AND
-job_location= 'Anywhere' and salary_year_avg IS NOT NULL
+job_work_from_home= TRUE and salary_year_avg IS NOT NULL
 ORDER BY salary_year_avg DESC
 limit 10 
 )
